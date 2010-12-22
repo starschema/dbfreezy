@@ -1,0 +1,16 @@
+# Example config file 
+# 
+connectString = DSN=myutf8test;uid=orcl;pwd=xexe;charset=UTF8;
+
+# Gzip compressed output
+run one = {
+    statement = select * from test1
+    filebase  = onelog-%Y-%m-%d_%H-%M-%S.csv.gz
+}
+
+# plain CSV output
+run two = {
+    statement = select * from test2 order by name desc 
+    filebase  = twolog-%Y-%m-%d_%H-%M-%S.csv
+}
+
